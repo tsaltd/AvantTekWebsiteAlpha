@@ -87,9 +87,15 @@
             </div>
             <div class="row" ng-app="app-email">
                 <div class="col-md-12">
+
                     <form novalidate name="myForm" ng-controller="emailController" class="form-inline">
-                        <input type="email" name="input" class="input-lg" ng-model="email.text" required>
-                        <button ng-click='validateEmail()' type="submit" class="btn btn-primary">Subscribe</button>
+                        <div class="form-group">
+                            <input type="email" id="SubscribeEmail" name="SubscribeEmail" class="input-lg" ng-model="SubscribeEmail.address" required>
+                            @*<input type="email" name="input" ng-model="email.text" required>*@
+                        </div>
+                        <div class="form-group">
+                            <input type="submit"value="Subscribe" class="btn btn-primary"/>
+                        </div>
                         <div role="alert">
                             <span class="error" ng-show="myForm.input.$error.required">
                                 Required!
@@ -98,18 +104,18 @@
                                 Not valid email!
                             </span>
                         </div>
-                        <tt>text = {{email.text}}</tt><br/>
-                        <tt>myForm.input.$valid = {{myForm.input.$valid}}</tt><br/>
-                        <tt>myForm.input.$error = {{myForm.input.$error}}</tt><br/>
+                        <tt>text = {{SubscribeEmail.address}}</tt><br/>
+                        <tt>myForm.SubscribeEmail.$valid = {{myForm.SubscribeEmail.$valid}}</tt><br/>
+                        <tt>myForm.SubscribeEmail.$error = {{myForm.SubscribeEmail.$error}}</tt><br/>
                         <tt>myForm.$valid = {{myForm.$valid}}</tt><br/>
                         <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br/>
                         <tt>myForm.$error.email = {{!!myForm.$error.email}}</tt><br/>
                         <div>
-                            {{email.wtf}}
+                            {{wtf}}
                         </div>
                     </form>
-                    
-                    
+
+
                 </div>
 
 

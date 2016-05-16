@@ -1,8 +1,8 @@
 ﻿
 (function () {
-    var text = element(by.binding('email.text'));
+    var text = element(by.binding('SubscribeEmail.address'));
     var valid = element(by.binding('myForm.input.$valid'));
-    var input = element(by.model('email.text'));
+    var input = element(by.model('SubscribeEmail.address'));
 
     it('should initialize to model', function () {
         expect(text.getText()).toContain('me@example.com');
