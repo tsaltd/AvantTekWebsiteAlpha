@@ -1,3 +1,3 @@
-﻿var emailApp = function() {
-    angular.module("emailApp", []);
-};
+﻿(function() {
+    angular.module("app-email", []);
+})();
