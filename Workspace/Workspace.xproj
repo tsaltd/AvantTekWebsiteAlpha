@@ -18,7 +18,6 @@
     <DnxInvisibleContent Include="bower.json" />
     <DnxInvisibleContent Include=".bowerrc" />
     <DnxInvisibleContent Include="package.json" />
-    <DnxInvisibleContent Include="wwwroot\HTML\validateDate.html" />
   </ItemGroup>
   <ItemGroup>
     <DnxInvisibleCompile Include="wwwroot\Models\_TModel.cs" />

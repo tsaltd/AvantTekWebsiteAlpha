@@ -20,18 +20,18 @@ $(document).ready(function() {
 
   // ==================== NIVO LIGHTBOX ==================== //
 
-//  $('.thumbnail').nivoLightbox();
+  $('.thumbnail').nivoLightbox();
   
   	  
-//  $('.owl-carousel').owlCarousel({
-//    center: true,
-//    loop:true,
-//    items:1,
-//    margin:30,
-//    stagePadding:30,
-//    autoplay:true,
-//    autoplayHoverPause:true
-//});
+  $('.owl-carousel').owlCarousel({
+    center: true,
+    loop:true,
+    items:1,
+    margin:30,
+    stagePadding:30,
+    autoplay:true,
+    autoplayHoverPause:true
+});
 
 
 

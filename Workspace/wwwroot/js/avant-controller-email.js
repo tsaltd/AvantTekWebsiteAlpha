@@ -2,22 +2,14 @@
     angular.module('app-email', [])
         .controller('emailController', [
             '$scope', function($scope) {
-                $scope.emailSubscribe = {
+                $scope.email = {
                     text: 'me@example.com',
-                    wtf: 'fixed',
-                    isOK: 'hello'
-                }
-                $scope.SubmitEmail = function() {
-                    //alert(emailSubscribe.isOK);
-                    alert("wtf");
-                $scope.SubmitEmail = {
-                    alert(emailSubscribe.isOK);
-                    alert("wtf");
-                    me: 'steve'
+                    wtf: 'fixed !'
             };
+                $scope.validateEmail = function ()
+                {
+                    $scope.wtf ='worked !';
 
-            
-         
-
-            }]);
+                };
+    }]);
 })();
