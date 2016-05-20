@@ -13,7 +13,7 @@
     <title>AvantTek - Info Portal Alpha</title>
     <link href="~/red/css/style.css" rel="stylesheet" />
     <link href="~/red/css/red_avanttek.css" rel="stylesheet"/>
-    <script src="~/html/js/validatedate/angularvalidateemail.js"></script>
+    @*<script src="~/html/js/validatedate/angularvalidateemail.js"></script>*@
 </head>
 <body>
     <div class="doc-loader"></div>
@@ -80,10 +80,10 @@
                 <div class="col-md-12"></div>
                 <h3>Sign up today to be notified when we launch the app!</h3>
             </div>
-            <div class="row" ng-app="app-email">
+            <div class="row" ng-app="emailApp">
                 <div class="col-md-12">
-                    <form novalidate name="myForm" ng-controller="emailController" class="form-inline" ng-submit="$testfunc()">
-                        @*<form novalidate name="myForm" ng-controller="" class="form-inline">*@
+                    @*<form novalidate name="myForm" ng-controller="emailController" class="form-inline" ng-submit="$testfunc()">*@
+                        <form novalidate name="myForm" ng-controller="" class="form-inline">
                             <div class="form-group">
                                 <input type="email" name="input" class="input-lg" ng-model="emailSubscribe.text" required>
                             </div>
