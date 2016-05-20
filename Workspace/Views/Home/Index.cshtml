@@ -12,13 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AvantTek - Info Portal Alpha</title>
     <link href="~/red/css/style.css" rel="stylesheet" />
-    <link href="~/red/css/red_avanttek.css" rel="stylesheet" />
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link href="~/red/css/red_avanttek.css" rel="stylesheet"/>
+    <script src="~/html/js/validatedate/angularvalidateemail.js"></script>
 </head>
 <body>
     <div class="doc-loader"></div>
@@ -75,7 +70,7 @@
             </div><!-- /col-md-4 -->
         </div><!-- /row -->
         <!-- /container -->
-        !-- /more-features -->
+        <!-- /more-features -->
 
     </section>
     <!--////////// NEWSLETTER SECTION ////////// -->
@@ -87,33 +82,39 @@
             </div>
             <div class="row" ng-app="app-email">
                 <div class="col-md-12">
-                    <form novalidate name="myForm" ng-controller="emailController" class="form-inline">
-                        <input type="email" name="input" class="input-lg" ng-model="email.text" required>
-                        <button ng-click='validateEmail()' type="submit" class="btn btn-primary">Subscribe</button>
-                        <div role="alert">
-                            <span class="error" ng-show="myForm.input.$error.required">
-                                Required!
-                            </span>
-                            <span class="error" ng-show="myForm.input.$error.email">
-                                Not valid email!
-                            </span>
-                        </div>
-                        <tt>text = {{email.text}}</tt><br/>
-                        <tt>myForm.input.$valid = {{myForm.input.$valid}}</tt><br/>
-                        <tt>myForm.input.$error = {{myForm.input.$error}}</tt><br/>
-                        <tt>myForm.$valid = {{myForm.$valid}}</tt><br/>
-                        <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br/>
-                        <tt>myForm.$error.email = {{!!myForm.$error.email}}</tt><br/>
-                        <div>
-                            {{email.wtf}}
-                        </div>
-                    </form>
-                    
-                    
+                    <form novalidate name="myForm" ng-controller="emailController" class="form-inline" ng-submit="$testfunc()">
+                        @*<form novalidate name="myForm" ng-controller="" class="form-inline">*@
+                            <div class="form-group">
+                                <input type="email" name="input" class="input-lg" ng-model="emailSubscribe.text" required>
+                            </div>
+                            <div class="form-group">
+                                @*<button ng-submit='emailSubscribe.SubmitEmail()' type="submit" class="btn btn-primary">Subscribe</button>*@
+                                @*<button type="submit" class="btn btn-primary">Subscribe</button>*@
+                                <button ng-click='testfunc()' type="submit" class="btn btn-primary">Subscribe</button>
+
+
+                            </div>
+                            <div role="alert">
+                                <span class="error" ng-show="myForm.input.$error.required">
+                                    Required!
+                                </span>
+                                <span class="error" ng-show="myForm.input.$error.email">
+                                    Not valid email!
+                                </span>
+                            </div>
+                            <tt class="hideme">text = {{emailSubscribe.text}}</tt><br />
+                            <tt class="hideme">myForm.input.$valid = {{myForm.input.$valid}}</tt><br />
+                            <tt class="hideme">myForm.input.$error = {{myForm.input.$error}}</tt><br />
+                            <tt class="hideme">myForm.$valid = {{myForm.$valid}}</tt><br />
+                            <tt class="hideme">myForm.$error.required = {{!!myForm.$error.required}}</tt><br />
+                            <tt class="hideme">myForm.$error.email = {{!!myForm.$error.email}}</tt><br />
+                            <div>
+                                {{emailSubscribe.wtf}}
+                                <br/>
+                                {{SubmitEmail.me}}
+                            </div>
+                        </form>
                 </div>
-
-
-
             </div>
 
         </div>
@@ -141,17 +142,18 @@
     </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    @*<script src="js/bootstrap.js"></script>*@
-    @*<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@
-    @*<script src="js/wow.min.js"></script>*@
     <script src="~/lib/angular/angular.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    @*<script src="js/bootstrap.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/wow.min.js"></script>*@
     <script src="~/red/js/wow.min.js"></script>
     <script src="~/red/js/owl.carousel.min.js"></script>
     <script src="~/red/js/main.js"></script>
     <script src="~/js/avant-app-email.js"></script>
-    <script src="~/js/avant-email.js"></script>
-    <script src="~/js/avant-controller-email.js"></script>
+<script src="~/js/avant-controller-email.js"></script>
+    <script src="~/js/protractor.js"></script>
+
+
 </body>
 </html>

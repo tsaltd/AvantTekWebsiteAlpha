@@ -5,7 +5,8 @@
 
 @media (max-width:   768px) {
 
-    #intro > div >  {
+    #intro > div
+    {
         padding-top: 200px;
     }
 }
@@ -13,3 +14,6 @@
 #features > div > h2 {
     padding-bottom: 20px;
 }
+/*.hideme {
+    display: none;
+}*/

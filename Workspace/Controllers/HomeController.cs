@@ -19,6 +19,10 @@ namespace Workspace.Controllers
         {
             return View();
         }
+        public IActionResult HomeTest()
+        {
+            return View();
+        }
         public IActionResult About()
         {
             return View();
