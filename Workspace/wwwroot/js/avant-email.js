@@ -1,6 +1,6 @@
 ﻿
-(function () {
-    var text = element(by.binding('email.text'));
+var validate = (function () {
+    var text =  element(by.binding('email.text'));
     var valid = element(by.binding('myForm.input.$valid'));
     var input = element(by.model('email.text'));
 
