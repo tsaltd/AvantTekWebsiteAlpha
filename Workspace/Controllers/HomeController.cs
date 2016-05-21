@@ -15,6 +15,10 @@ namespace Workspace.Controllers
         {
             return View();
         }
+        public IActionResult LearnToClick()
+        {
+            return View();
+        }
         public IActionResult AvantTekAlpha()
         {
             return View();

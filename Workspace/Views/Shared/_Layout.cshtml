@@ -1,5 +1,6 @@
 ﻿@using Microsoft.AspNet.Mvc
 @using Microsoft.AspNet.Mvc.Rendering
+@using Newtonsoft.Json
 <!doctype html>
 <html>
 <head>
@@ -26,7 +27,7 @@
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/angular/angular.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-    @RenderSection("Scripts")
+    @RenderSection("Scripts", required:false);
 </head>
 <body>
 
