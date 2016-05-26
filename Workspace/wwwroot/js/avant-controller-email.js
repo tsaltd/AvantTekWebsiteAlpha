@@ -11,8 +11,8 @@
             vm.email = {
                 text: "steve.mintz@gmail.com"
             }
-            vm.validateEmail = function() {
-                alert("hi steve");
+            vm.validateEmail = function(msg) {
+                alert(msg);
             }
 
         }

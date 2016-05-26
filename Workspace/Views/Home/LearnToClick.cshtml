@@ -14,7 +14,7 @@
         <div class="col-md-6 col-md-offset-6">
             <div ID="emailtest" style="padding-top: 300px">
                 @*<div ID="emailtest" style="padding-top: 300px" class="ng-app">*@
-                <form name="myForm" role="form" ng-submit="vm.validateEmail()">
+                <form name="myForm" role="form" ng-submit="vm.validateEmail(myForm.input.$valid)">
                     <label>
                         Email:
                         <input type="email" name="input" ng-model="vm.email.text" required>
