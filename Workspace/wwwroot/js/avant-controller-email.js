@@ -8,11 +8,12 @@
 
             vm.wtf = "hello";
 
-            vm.email = {
-                text: "steve.mintz@gmail.com"
-            }
-            vm.validateEmail = function(msg) {
-                alert(msg);
+            //vm.email = {
+            //    text: "steve.mintz@gmail.com",
+            //    sender:   document.getElementById("ValidEmail")
+            //}
+            vm.validateEmail = function() {
+                alert("wtf");
             }
 
         }
