@@ -1,102 +1,19 @@
-﻿Got it to work !!   Hope some of you find this useful .... so many top sites with complex ( and simple ) nav bars that scroll out of the page .... not a very good user experience IMHO
+﻿public void addNewEmail(string who, int how)
+        {
+            From = who;
+            Text = who;
 
-***navbar-fixed-top class is property of section that wraps the both rows (1) top row with links and (2) the navbar***
+            switch (how)
+            {
+                case 1:
+                    Html = "<html><Body>Hello</Body></html>";
+                    From = "alphauser@avanttek.com";
+                    Subject = "Interested Alpha"
+                    break;
+                default:
+                    Html = "wtf";
+                    break;
+            }
+            foreach (string mailaddress in SendTo)
 
-(Also needed to make some CSS changes to margins and paddings .... 
-
-strangely the view that is injected to _Layout  spilled over the Container/Row sections of the divs containing the RenderBody() and hid the top of the renderred view behind the header .. needed to fix that with margin settings
-
-   =======  CONTAINER / ROW IS INJECTED INTO LAYOUT VIA  "RenderBody"=======
-
-    <div class="container-fluid">
-        <div class="row">
-
-       ******Main Page Content Here******
-
-
-        </div>
-    </div>
-
-
-<!-- end snippet -->
-
-
-HERE'S THE FIX ...
-
-<!-- begin snippet: js hide: false -->
-
-<!-- language: lang-html --
-
-<body>
-    @*<div class="not-front" style="margin-right: 0; margin-left: 0">*@
-    <div id="main-wrapper" class="color-skin-3">
-        <div id="main">
-            <div>
-<section id="NFTParent" class="navbar-fixed-top">
-                        <header id="Header-1" class="header">
-                            @*<nav class="navbar navbar-default role=navigation">*@
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-8 header-info-wrapper">
-                                        <ul class="list-inline">
-                                            <li><i class="fa fa-phone fa-lg"></i> Phone: 888-925-1858</li>
-                                            <li><i class="fa fa-envelope"></i> Mail: <a href="mailto: info@avanttek.com"></a></li>
-                                        </ul>
-
-                                        <!-- /.list-inline -->
-                                    </div>
-                                    <!-- /.header-info-wrapper -->
-                                    <div class="col-xs-12 col-sm-4 social-link-wrapper">
-                                        <ul class="social-links">
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            .
-                                            .
-                                            .
-                                            <li><a href="#"><i class="fa  fa-envelope fa-lg"></i></a></li>
-                                        </ul>
-
-                                        <!-- /.social-links -->
-                                    </div>
-                                    <!-- /.social-link-wrapper -->
-                                </div>
-                                <!-- /.row -->
-                            </div>
-                            @*</nav>*@
-                            <!-- /.container -->
-                        </header>
-                        <!-- /.header-1 -->
-                        @*<header id="header-2" class="header navbar-fixed-top">*@
-                        <header id="header-2" class="header">
-                            <nav class="navbar navbar-default" role="navigation">
-                                <div class="container">
-                                    @*<div class="row">*@
-                                    <!-- Brand and toggle get grouped for better mobile display -->
-                                    <div class="navbar-header">
-                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                                            <span class="sr-only">Toggle navigation</span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                        </button>
-                                        <a class="navbar-brand" href="#">Avant<span>Tek</span></a>
-                                    </div>
-                                    <!-- Collect the nav links, forms, and other content for toggling -->
-                                    <div class="navbar-collapse navbar-ex1-collapse collapse" aria-expanded="false" style="height: 0.666667px;">
-                                        <ul class="nav navbar-nav">
-                                            <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Home</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#">Home Layout 1</a></li>
-                                                    <li><a href="#">Home Layout 2</a></li>
-                                                    <li><a href="#">Home Layout 3</a></li>
-                                                    <li><a href="#">Home Layout 4</a></li>
-                                                    <li><a href="#">Home Layout 5</a></li>
-                                                </ul>
-                                            </li>
-                                    <!-- /.container -->
-                                </div>
-                            </nav>
-                            <!-- /.navbar -->
-                        </header>
-                    </section>
-                </div>
+                mailaddress.Length = 
