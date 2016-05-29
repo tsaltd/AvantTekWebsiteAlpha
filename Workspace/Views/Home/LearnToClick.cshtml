@@ -5,16 +5,17 @@
 }
 @section Scripts
 {
-<script src="~/js/avant-app-email.js"></script>
-<script src="~/js/avant-controller-email.js"></script>
+    <script src="~/js/avant-app-email.js"></script>
+    <script src="~/js/avant-controller-email.js"></script>
 }
 
 <div class="container-fluid" ng-app="app-email">
-    <div class="row" ng-controller="emailController as vm"> 
+    <div class="row" ng-controller="emailController as vm">
         <div class="col-md-6 col-md-offset-6">
-            <div ID="emailtest" style="padding-top: 300px">
+            <div ID="emailtest" style="padding-top: 300px" class="ng-app">
                 @*<div ID="emailtest" style="padding-top: 300px" class="ng-app">*@
-                <form name="myForm" role="form" ng-submit="vm.validateEmail(myForm.input.$valid)">
+
+                <form name="myForm" role="form" ng-submit="vm.validateEmail()">
                     <label>
                         Email:
                         <input type="email" name="input" ng-model="vm.email.text" required>
@@ -28,14 +29,21 @@
                             Not valid email!
                         </span>
                     </div>
+                    @*<tt>myForm.input.$valid = {{myForm.input.$valid}}</tt><br/>
+            <tt>myForm.input.$error = {{myForm.input.$error}}</tt><br/>
+            <tt>myForm.$valid = {{myForm.$valid}}</tt><br/>
+            <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br/>
+            <tt>myForm.$error.email = {{!!myForm.$error.email}}</tt><br/>*@
                     @*<tt>text = {{email.text}}</tt><br />*@
                     <tt>text = {{vm.email.text}}</tt><br />
                     <tt>myForm.input.$valid = {{myForm.input.$valid}}</tt><br />
                     <tt>myForm.input.$error = {{myForm.input.$error}}</tt><br />
-                    <tt>myForm.$valid = {{myForm.$valid}}</tt><br />
                     <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br />
                     <tt>myForm.$error.email = {{!!myForm.$error.email}}</tt><br />
+                    <tt>myForm.$valid = {{myForm.$valid}}</tt><br/>
                 </form>
+               </div>
+                
 
             </div>
 
@@ -43,4 +51,3 @@
 
 
     </div>
-</div>
