@@ -5,10 +5,6 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Workspace", "Workspace\Workspace.xproj", "{4F388A97-2D28-4B3A-A60C-6B16E15DD8DE}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Actors", "Actors\Actors.xproj", "{81233BD7-154A-4C6D-A567-049E0751A859}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Messages", "Messages\Messages.xproj", "{AAB30CD5-E0A3-433A-AB2E-50A492638AF7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{4F388A97-2D28-4B3A-A60C-6B16E15DD8DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F388A97-2D28-4B3A-A60C-6B16E15DD8DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F388A97-2D28-4B3A-A60C-6B16E15DD8DE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{81233BD7-154A-4C6D-A567-049E0751A859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{81233BD7-154A-4C6D-A567-049E0751A859}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{81233BD7-154A-4C6D-A567-049E0751A859}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{81233BD7-154A-4C6D-A567-049E0751A859}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AAB30CD5-E0A3-433A-AB2E-50A492638AF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AAB30CD5-E0A3-433A-AB2E-50A492638AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AAB30CD5-E0A3-433A-AB2E-50A492638AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AAB30CD5-E0A3-433A-AB2E-50A492638AF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
