@@ -8,12 +8,15 @@
 
             vm.wtf = "hello";
 
-            //vm.email = {
-            //    text: "steve.mintz@gmail.com",
+            vm.email = {
+                text: "steve.mintz@gmail.com"
             //    sender:   document.getElementById("ValidEmail")
-            //}
+            }
             vm.validateEmail = function() {
                 alert("wtf");
+            }
+            vm.SendGridAlphaInterested = function() {
+                alert("Interested");
             }
 
         }
