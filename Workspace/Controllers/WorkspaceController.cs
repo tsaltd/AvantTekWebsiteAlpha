@@ -21,7 +21,7 @@ namespace Workspace.Controllers
         public IActionResult HelloHello()
         {
 
-            Utility ut = new Utility(); 
+            xUtility ut = new xUtility(); 
              
             ut.Flag = 2;
             
