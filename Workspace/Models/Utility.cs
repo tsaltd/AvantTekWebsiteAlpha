@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Workspace.Models
 {
-    public class xUtility
+    public class Utility
     {
         public int Flag { get; set; }
     }

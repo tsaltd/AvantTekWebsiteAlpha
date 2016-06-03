@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
-using AvantTek.CodeLibrary;
+using Messages;
 using Workspace.ViewModels;
 
 namespace Workspace.Controllers.API

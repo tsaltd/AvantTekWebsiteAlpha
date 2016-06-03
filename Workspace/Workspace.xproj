@@ -22,8 +22,5 @@
   <ItemGroup>
     <DnxInvisibleCompile Include="wwwroot\Models\_TModel.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Projects\SendGrid150531\SendGridProcessor\SendGridProcessor\SendGridProcessor.csproj" />
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>
