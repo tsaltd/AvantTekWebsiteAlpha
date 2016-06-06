@@ -3,24 +3,11 @@
     angular.module("app-email")
         .controller("emailController", emailController);
 
-    function emailController($scope, $http) {
+    function emailController($http) {
 
         var vm = this;
 
-        var isbusy = null;
-        //var parmFinally = isbusy;
-        //vm.finallyFunction function()
-        //{
-        //    isbusy= parmfinally;
-        //}
-
-        var onSendComplete = function (response) {
-            $scope.postresult = response;
-        }
-
         vm.wtf = "hello";
-
-        //        vm.isbusy = null;
 
 
         vm.alphaEmail = {
@@ -30,23 +17,35 @@
             To: "alphauser@avanttek.com"
         }
 
+
         vm.email = {
             text: "steve.mintz@gmail.com"
             //    sender:   document.getElementById("ValidEmail")
         }
-        vm.SendGridAlphaInterested = function () {
-
-            vm.isbusy = true;
-            alert(vm.email.text);
-            $scope.isbusy = true;
+        vm.validateEmail = function() {
+            alert("wtf");
         }
-        $http({
-            method: 'POST',
-            url: 'http://www.cuisinecuration.com/api/Sendgrid/send',
-            data: {
-                    who: vm.email.text
-                }
-                .then(alert('ok'), alert('no'))
-                .finally(isbusy = false)
-        });
-    }})();
+        vm.SendGridAlphaInterested = function () {
+            vm.isbusy = true;
+         //   alert("Interested");
+            $http.post("/api/Message", vm.alphaEmail)
+                .then(function () {
+                    //success
+                    alert("yes");
+
+                },
+                    function () {
+                        //failure
+                        alert("no");
+                    })
+                .finally(function () {
+                    vm.busy = false;
+                });
+    };
+
+};
+
+})();
+
+
+
