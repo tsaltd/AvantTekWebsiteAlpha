@@ -1,14 +1,19 @@
-﻿(function () {
-    "use strict";
-    angular.module("app-email")
-        .controller("emailController", emailController);
+﻿"use strict";
+angular.module("app-email")
+    .controller("emailController", emailController);
 
-    function emailController($http) {
+function emailController($scope, $http) {
 
-        var vm = this;
+    var vm = this;
 
-        vm.wtf = "hello";
+    var onSendComplete = function(response) {
+        $scope.user = response.data;
+    }
 
+    vm.SendGridAlphaInterested = function(who) {
+            $http.get("http://www.cuisinecuration.com/api/sendgrid/send", { params: { "who": who } })
+                .then(onSendComplete);
+        }
 
         vm.alphaEmail = {
             From: "stevem@avanttek.com",
@@ -16,36 +21,19 @@
             Text: "MessageText",
             To: "alphauser@avanttek.com"
         }
-
-
         vm.email = {
             text: "steve.mintz@gmail.com"
             //    sender:   document.getElementById("ValidEmail")
         }
-        vm.validateEmail = function() {
-            alert("wtf");
+
+        vm.SendGridAlphaInterested = function(me) {
+          // var me = "zozo@ff.noq";
+          $http.get("http://www.cuisinecuration.com/api/sendgrid/send/?", { params: { "who": me } })
+          // $http.get("http://www.cuisinecuration.com/api/sendgrid/send?who=xx@yy.ets")
+                .then(onSendComplete);
+
+
         }
-        vm.SendGridAlphaInterested = function () {
-            vm.isbusy = true;
-         //   alert("Interested");
-            $http.post("/api/Message", vm.alphaEmail)
-                .then(function () {
-                    //success
-                    alert("yes");
-
-                },
-                    function () {
-                        //failure
-                        alert("no");
-                    })
-                .finally(function () {
-                    vm.busy = false;
-                });
-    };
-
-};
-
-})();
-
-
+        
+    }
 

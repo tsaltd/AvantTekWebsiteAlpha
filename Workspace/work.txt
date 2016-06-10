@@ -1,3 +1,49 @@
-﻿Subject: "AlphaInterested" + "11/11/2015"
-            Text = "MessageText"
-            SendTo = "alphauser@avanttek.com"
+﻿function emailController($scope, $http) {	
+
+    var vm = this;
+
+
+ //   var isbusy = null;
+
+
+    var onSendComplete = function (response) {
+        $scope.postresult = response;
+    }
+
+    vm.wtf = "hello";
+
+    //        vm.isbusy = null;
+
+
+    vm.alphaEmail = {
+        From: "stevem@avanttek.com",
+        Subject: "AlphaInterested",
+        Text: "MessageText",
+        To: "alphauser@avanttek.com"
+    }
+
+    vm.email = {
+        text: "steve.mintz@gmail.com"
+        //    sender:   document.getElementById("ValidEmail")
+    }
+    vm.SendGridAlphaInterested = function () {
+
+        //vm.isbusy = true;
+        //alert(vm.email.text);
+        //$scope.isbusy = true;
+
+        //var data = { who: "me@u.net" };
+      //$http.get('http://www.cuisinecuration.com/api/SendGrid/send?', { who: 'me@you.net' });
+       // $http.get('http://www.cuisinecuration.com/api/sendgrid/send?who=wp8000@avanttek.com');
+
+       // $http.get('http://cuisinecuration.azurewebsites.net/api/Sendgrid/send/?', { who: 'me@you.net' });
+
+        //$http({
+        //    method: 'POST',
+        //    url: "http://www.cuisinecuration.com/api/Sendgrid/send",
+        //    data: {
+        //        //who: vm.email.text
+        //        who: "steve.mintz@me.net"
+        //        }
+        //        //.then(alert('ok'), alert('no'))
+        //        //.finally(isbusy = false)
