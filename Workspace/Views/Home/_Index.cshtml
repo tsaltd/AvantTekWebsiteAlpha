@@ -1,0 +1,159 @@
+﻿@using System.Threading.Tasks
+@using Microsoft.AspNet.Mvc.Rendering
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AvantTek - Info Portal Alpha</title>
+    <link href="~/red/css/style.css" rel="stylesheet" />
+    <link href="~/red/css/red_avanttek.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="doc-loader"></div>
+    <!--/////////// HEADER SECTION //////////-->
+    <section id="intro">
+
+        <div class="container">
+            <div class="intro-well wow animated bounceIn">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Hello AvantTek !!</h1>
+                        <h2>Your collaboration space for technology news and views is on the way</h2>
+                        @*<a id="HomeLink" class="btn btn-primary" href="http://www.avanttek.>Visit {alpha}</a>
+
+                            @Html.ActionLink("To the Alpha Portal", "AvantTekAlpha", "Home", null, new {@class = "btn btn-info"}, new {ID = "sdsdf"});*@
+                        @Html.ActionLink("To The Portal", "AvantTekAlpha", "Home", null, new { @class = "btn btn-info", id = "HomeLink" });
+
+                    </div>
+                </div>
+            </div>
+        </div><!-- /container -->
+    </section>
+    <!-- LAUNCH VERSION COMMENT START
+      <!--////////// FEATURES SECTION ////////// -->
+    <section id="features">
+        <div class="container wow fadeIn animated">
+            <h1>Q2 - 2016 AvantTek.com Portal Launches</h1>
+            <h2>@Html.ActionLink("{About us}", "LearnToClick", "Home") </h2>
+
+        </div><!-- /container -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 wow fadeInLeft animated" data-wow-delay="0.1s">
+                    <div class="iconbox">
+                        <a href="#" class="icn-1">Devices</a>
+                    </div>
+                    <p class="icntitle">Applications</p>
+                    <p class="icnp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget elit eu velit vehicula feugiat. </p>
+                </div><!-- /col-md-4 -->
+                <div class="col-md-4 wow fadeInLeft animated" data-wow-delay="0.2s">
+                    <div class="iconbox">
+                        <a href="#" class="icn-2">Intelligence</a>
+                    </div>
+                    <p class="icntitle">Intelligence</p>
+                    <p class="icnp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget elit eu velit vehicula feugiat. </p>
+                </div><!-- /col-md-4 -->
+                <div class="col-md-4 wow fadeInLeft animated" data-wow-delay="0.3s">
+                    <div class="iconbox">
+                        <a href="#" class="icn-3">App of Year</a>
+                    </div>
+                    <p class="icntitle">Platforms</p>
+                    <p class="icnp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget elit eu velit vehicula feugiat. </p>
+                </div>
+            </div><!-- /col-md-4 -->
+        </div><!-- /row -->
+        <!-- /container -->
+        !-- /more-features -->
+
+    </section>
+    <!--////////// NEWSLETTER SECTION ////////// -->
+    <section id="newsletter">
+        <div class="container wow animated fadeInDown">
+            <div class="row">
+                <div class="col-md-12"></div>
+                <h3>Sign up today to be notified when we launch the app!</h3>
+            </div>
+            <div class="row" ng-app="app-email">
+                <div class="col-md-12">
+                    <form novalidate name="myForm" ng-controller="emailController" class="form-inline">
+                        <input type="email" name="input" class="input-lg" ng-model="email.text" required>
+                        <button ng-click='validateEmail()' type="submit" class="btn btn-primary">Subscribe</button>
+                        <div role="alert">
+                            <span class="error" ng-show="myForm.input.$error.required">
+                                Required!
+                            </span>
+                            <span class="error" ng-show="myForm.input.$error.email">
+                                Not valid email!
+                            </span>
+                        </div>
+                        <tt>text = {{email.text}}</tt><br />
+                        <tt>myForm.input.$valid = {{myForm.input.$valid}}</tt><br />
+                        <tt>myForm.input.$error = {{myForm.input.$error}}</tt><br />
+                        <tt>myForm.$valid = {{myForm.$valid}}</tt><br />
+                        <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br />
+                        <tt>myForm.$error.email = {{!!myForm.$error.email}}</tt><br />
+                        <div>
+                            {{email.wtf}}
+                        </div>
+                    </form>
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <!--////////// DOWNLOAD SECTION ////////// -->
+    <section id="download">
+        <div class="container wow fadeIn animated">
+            <div class="row">
+                <!--<div class="col-md-4">
+                <h3>Ea eam mollis phaedrum, eam at appareat consetetur repudiandae,</h3>
+                  <a classbtn btn-primary" href="#"><li class="fa fa-apple fa-lg"></li>&nbsp;&nbsp;Download from Appstore</a>
+                </div>-->
+
+                <div class="col-md-8">
+                    <img src="~/red/img/iphone2.jpg" class="img-responsive" alt="picture">
+                </div>
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </section>
+    end launch version -->
+    <!--////////// FOOTER SECTION ////////// -->
+    <footer>
+        <p>Copyright © 2015 Flati.  Made with <i class="fa fa-heart footer-heart"></i> by Themeberry</p>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    @*<script src="js/bootstrap.js"></script>*@
+    @*<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@
+    @*<script src="js/wow.min.js"></script>*@
+    <script src="~/lib/angular/angular.js"></script>
+    <script src="~/red/js/wow.min.js"></script>
+    <script src="~/red/js/owl.carousel.min.js"></script>
+    <script src="~/red/js/main.js"></script>
+    <script src="~/js/avant-app-email.js"></script>
+    <script src="~/js/avant-email.js"></script>
+    <script src="~/js/avant-controller-email.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+@*@*using System.Threading.Tasks
+    @using Microsoft.AspNet.Mvc
+    @using Microsoft.AspNet.Mvc.Rendering
+    @using Newtonsoft.Json*@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AvantTek - Info Portal Alpha</title>
+        <link href="~/red/css/style.css" rel="stylesheet" />
+        <link href="~/red/css/red_avanttek.css" rel="stylesheet" />
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <link href='https://fonts.googleapis.com/css?family=Peddana' rel='stylesheet' type='text/css'>
+        <title>video</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Your description">
+        <meta name="keywords" content="Your keywords">
+        <meta name="author" content="Your name">
+        <link rel="icon" href="~/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
+        <!-- Font Awesome -->
+        <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+        @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">*@
+        <!-- Google Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href="~/html/css/stylesheet.css" rel="stylesheet" />
+        <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="~/html/css/prettyphoto.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="~/html/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+        @*<link href="~/html/css/avanttek.css" rel="stylesheet" />*@
+        <link href="~/html/css/avanttek$.css" rel="stylesheet" />
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/angular/angular.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/avant-app-email.js"></script>
+        <script src="~/js/avant-controller-email.js"></script>
+        <script src="~/js/avant-email.js"></script>
+
+
+        @RenderSection("Scripts", required: false);
+    </head>
+    <body>
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+</html>
