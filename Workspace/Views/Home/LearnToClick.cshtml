@@ -1,8 +1,10 @@
 ﻿@using System.Threading.Tasks
 @*  *@
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "Title";
     Layout = "_Layout";
+
+
 }
 @section Scripts
 {
@@ -15,7 +17,6 @@
         <div class="col-md-6 col-md-offset-6">
             <div ID="emailtest" style="padding-top: 300px" class="ng-app">
                 @*<div ID="emailtest" style="padding-top: 300px" class="ng-app">*@
-
                 <form name="myForm" role="form" ng-submit="vm.SendGridAlphaInterested(vm.email.text)">
                     <label>
                         Email:
@@ -30,12 +31,6 @@
                             Not valid email!
                         </span>
                     </div>
-                    @*<tt>myForm.input.$valid = {{myForm.input.$valid}}</tt><br/>
-            <tt>myForm.input.$error = {{myForm.input.$error}}</tt><br/>
-            <tt>myForm.$valid = {{myForm.$valid}}</tt><br/>
-            <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br/>
-            <tt>myForm.$error.email = {{!!myForm.$error.email}}</tt><br/>*@
-                    @*<tt>text = {{email.text}}</tt><br />*@
                     <tt>text = {{vm.email.text}}</tt><br />
                     <tt>myForm.input.$valid = {{myForm.input.$valid}}</tt><br />
                     <tt>myForm.input.$error = {{myForm.input.$error}}</tt><br />
